@@ -1,0 +1,11 @@
+---
+title: Homepage
+layout: layouts/base.njk
+---
+<h1>w</h1>
+<ul>
+{% for post in collections.posts %}
+	<li><a href="{{post.url}}">{{ post.data.title }}</a>
+	<p>{{ post.templateContent | safe }}</p></li>
+{% endfor %}
+</ul>
